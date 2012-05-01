@@ -223,7 +223,7 @@ Handle<Object> JsonParser<seq_ascii>::ParseJson(Handle<String> source) {
                              position_,
                              position_ + 1);
     Handle<Object> result = factory->NewSyntaxError(message, array);
-    isolate()->Throw(*result, &location);
+    isolate()->Throw(*result, NULL);
     return Handle<Object>::null();
   }
   return result;
